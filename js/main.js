@@ -31,3 +31,13 @@ function alternarChat() {
         ventanaChat.style.display = 'none';
     }
 }
+
+function alternarMenu() {
+    // 1. Obtener el elemento del menú por su ID
+    const menu = document.getElementById('menu-movil');
+
+    // 2. Alternar la clase 'activo'
+    // Si la tiene, la quita; si no la tiene, la añade.
+    // Esto dispara el CSS que lo muestra o lo oculta.
+    menu.classList.toggle('activo');
+}

@@ -8,6 +8,44 @@ header {
     background-color: var(--colorOscuro);
 }
 
+/* Estilos por defecto para móviles (Mobile First) */
+
+.menu-enlaces {
+    display: none;
+    /* Ocultar el menú de enlaces al inicio */
+    /* ... otros estilos para la lista cuando se muestre ... */
+    width: 100%;
+    list-style: none;
+}
+
+.boton-hamburguesa {
+    display: block;
+    /* Mostrar el ícono de la hamburguesa */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilo para mostrar el menú con JavaScript */
+.menu-enlaces.activo {
+    display: flex;
+    /* O display: block; según el diseño */
+    flex-direction: column;
+}
+
+/* Media Query: En escritorio (pantallas grandes), OCULTAR el botón hamburguesa y MOSTRAR el menú */
+@media (min-width: 768px) {
+    .menu-enlaces {
+        display: flex;
+        /* El menú siempre visible */
+        width: auto;
+    }
+
+    .boton-hamburguesa {
+        display: none;
+        /* Ocultar el ícono de la hamburguesa */
+    }
+}
+
 /* Logo */
 
 .logo {
